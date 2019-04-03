@@ -1,0 +1,103 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <app-alerts></app-alerts> -->
+<!-- <div style="text-align:center">
+
+  <h1>
+    Welcome to {{ title }}
+  </h1> -->
+<!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
+<!-- </div> -->
+
+
+<!-- navbar navbar-inverse navbar-fixed-top -->
+<!-- navbar-fixed-top justify-content-between -->
+
+<!-- <img class="navbar-brand" src="../assets/welcome_logo.png" routerLink="/allTickets"> -->
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/events"><span><img src="../assets/welcome_logo.png" style="height: 100%;"></span> {{title}}</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>
+        <a routerLink="/events">Scorpions</a>
+      </li>
+      <li>
+        <a routerLink="/allTickets">Reveal All Tickets</a>
+      </li>
+      <!-- <li>
+        <a routerLink="/basket">Basket</a>
+      </li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!email">
+        <a routerLink="/login">
+          <span class="glyphicon glyphicon-log-in"></span> Log in/Register</a>
+      </li>
+      <li *ngIf="email">
+        <a routerLink="/basket">
+          <span class="glyphicon glyphicon-tag"></span> Basket</a>
+      </li>
+      <li *ngIf="email">
+        <a>
+          <span class="glyphicon glyphicon-user"></span> {{email}}</a>
+      </li>
+      <li *ngIf="accessLevel===1">
+        <a *ngIf="email" routerLink="/admin" title="Admin actions">Admin</a>
+      </li>
+      <li *ngIf="email">
+        <a routerLink="/login" (click)="logOut()" title="Press here to Log out from this account: {{email}}">
+          <span class="glyphicon glyphicon-log-in"></span> Log Out</a>
+      </li>
+    </ul>
+
+
+
+  </div>
+</nav>
+
+
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Page 1</a>
+      </li>
+      <li>
+        <a href="#">Page 2</a>
+      </li>
+      <li>
+        <a href="#">Page 3</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<!-- background-position: center; -->
+<router-outlet></router-outlet>
+
+<!-- style="background: rgba(58, 70, 8, 0.123);padding: 100%;background-attachment: fixed;
+
+background-repeat:repeat;
+background-size: cover;" -->
+
+<!-- <app-event-details></app-event-details> -->
+
+<footer>
+  <div class="container-fluid">
+      <div class="footer-copyright text-center py-3" style="position: fixed;left: 0;bottom: -8px;width: 100%;background-color: rgba(0, 0, 0, 0.74);color: white;text-align: center;">
+        © 2018 Copyright:
+          <a href=""> Desperandoms<br></a>
+          <p>A project for Coding Hive 2018 - Powered by <a href="https://www.kariera.gr/" target="_blank" >Kariera.gr</a> - Hiring Partners: <a href="https://www.intrasoft-intl.com/" target="_blank" >Intrasoft International</a> &amp; <a href="https://www.intralot.com/" target="_blank" >Intralot</a> </p>
+        </div>
+  </div>
+</footer>

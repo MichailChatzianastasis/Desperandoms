@@ -1,0 +1,51 @@
+[
+    {
+        "ticketId": 1,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved": 1
+    },
+    {
+        "ticketId": 2,
+        "eventName": "Iron Maiden_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved":1
+    },
+    {
+        "ticketId": 3,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved":1
+    },
+    {
+        "ticketId": 4,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved": 1
+    },
+    {
+        "ticketId": 5,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved": 1
+    },
+    {
+        "ticketId": 6,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved": 1
+    },
+    {
+        "ticketId": 7,
+        "eventName": "Scorpions_live",
+        "eventTime": "10th of july",
+        "price": 50,
+        "isReserved": 1
+    }
+]

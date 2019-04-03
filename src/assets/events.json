@@ -1,0 +1,168 @@
+[
+        {
+            "eventId": 1,
+            "name": "Harry Potter and The Cursed Child",
+            "description": "It was always difficult being Harry Potter and it isn’t much easier now that he is an overworked employee of the Ministry of Magic, a husband and father of three school-age children, While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.",
+            "address": "Palace Theatre, London, United Kingdom",
+            "tickets": [
+                {"eventId":1,
+                    "seatId": 1,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 2,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 3,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 4,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 5,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 6,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 7,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 8,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 9,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 10,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 11,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 12,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 13,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 14,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":1,
+                    "seatId": 15,
+                    "price": 40,
+                    "availability": 1
+                }
+            ]
+        },
+        {
+            "eventId": 2,
+            "name": "Les Miserables",
+            "description": "Les Miserables is a musical by Claude-Michel Schenberg which is based on Victor Hugo’s humungous historical novel of 1862 that covers the twists, turns and tales of French Revolution. Despite its inherent theme of adversity and misfortune along with the weight of the title, Les Mis is not all misery and no-joy-show rather it beautifully brings to stage the profound realities of our deep dark history. Set in early 19th-century France in the air of rebel and revolt, the musical is a strong and smart depiction of the transition of a society going through the several stringent stages of revolution.",
+            "address": "Shaftesbury Avenue, London, W1D 6BA",
+            "tickets": [
+                {"eventId":2,
+                    "seatId": 1,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 2,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 3,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 4,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 5,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 6,
+                    "price": 15,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 7,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 8,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 9,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 10,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 11,
+                    "price": 30,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 12,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 13,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 14,
+                    "price": 40,
+                    "availability": 1
+                },
+                {"eventId":2,
+                    "seatId": 15,
+                    "price": 40,
+                    "availability": 1
+                }
+            ]
+        }
+    ]

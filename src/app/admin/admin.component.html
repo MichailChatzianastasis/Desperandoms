@@ -1,0 +1,176 @@
+<div class="container" *ngIf='accessLevel.accessLevel===1' style="margin-top: 5%">
+
+
+  <h1>Hello Admin:</h1>
+
+
+  <div>
+    <h2>Change a user's password:</h2>
+
+    <div *ngIf='message'>
+      <h1>{{message}}</h1>
+    </div>
+
+    <table>
+      <tr>
+        <td>Username:</td>
+        <td>
+          <input [(ngModel)]="user.userName" name="username" type="text" placeholder="John67"> </td>
+      </tr>
+
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input [(ngModel)]="user.email" type="email"> </td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td>
+          <input [(ngModel)]="user.password" type="password"> </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+
+          <input type="button" (click)="changePassword()" value="Reset Password">
+        </td>
+
+      </tr>
+    </table>
+
+    <div *ngIf='resetMessage'>
+        <h1>{{resetMessage}}</h1>
+      </div>
+
+  </div>
+
+  <h2>Add a Ticket for an Event:</h2>
+
+  <div *ngIf="adminTicket">
+    <table>
+      <tr>
+        <td>Event Name:</td>
+        <td>
+          <input [(ngModel)]="adminTicket.eventName" name="eventName" type="text"> </td>
+      </tr>
+
+      <tr>
+        <td>Event Time:</td>
+        <td>
+          <input [(ngModel)]="adminTicket.eventTime" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td>
+          <input [(ngModel)]="adminTicket.price" type="number"> </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+
+          <input type="button" (click)="addTicket()" value="Add Ticket">
+        </td>
+
+      </tr>
+    </table>
+
+    <div *ngIf='ticketMessage'>
+        <h1>{{ticketMessage}}</h1>
+      </div>
+  </div>
+
+
+
+  <div style="margin-top: 5%">
+    <button (click)='getAllUsers()'>Generate Users Report</button>
+    <button style="margin-left: 5%" (click)='getAllReservedTickets()'>Generate Reserved Tickets Report</button>
+  </div>
+
+
+  <div *ngIf="allUsers">
+
+
+
+    <h2 style="margin-top: 5%">Here is a list of all the users:</h2>
+
+
+
+
+    <table class="table table-bordered" class="table table-hover">
+      <thead>
+        <tr  style="font-size: 25px;color: black;">
+          <th>ID</th>
+          <th>Access Level</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <!-- <div *ngFor="let tickets of ticket" class="list-group"> -->
+      <tbody *ngFor="let user of allUsers">
+        <tr  style="font-size: 20px;color: rgb(17, 0, 90);">
+          <td>{{user.userId}}</td>
+          <td>{{user.accessLevel}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td>{{user.userName}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+
+      </tbody>
+      <!-- </div> -->
+    </table>
+
+
+
+
+  </div>
+
+
+
+  <div *ngIf="allReservedTickets">
+
+
+
+    <h2 style="margin-top: 5%">Here is a list of all the reserved tickets by any user:</h2>
+
+
+
+
+    <table class="table table-bordered" class="table table-hover">
+      <thead>
+        <tr  style="font-size: 25px;color: black;">
+          <th>ID</th>
+          <th>Ticket Name</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>User</th>
+          <th>Cancel Ticket</th>
+        </tr>
+      </thead>
+      <!-- <div *ngFor="let tickets of ticket" class="list-group"> -->
+      <tbody *ngFor="let tickets of allReservedTickets">
+        <tr *ngIf="tickets.isReserved===1"  style="font-size: 20px;color: rgb(17, 0, 90);">
+          <td>{{tickets.ticketId}}</td>
+          <td>{{tickets.eventName}}</td>
+          <td>{{tickets.eventTime}}</td>
+          <td>{{tickets.price}}</td>
+          <td>{{tickets.userId}}</td>
+          <td>
+            <button (click)="cancelTicket(tickets.ticketId,tickets.userId)" title="Unreserve this ticket">Cancel</button>
+          </td>
+        </tr>
+
+      </tbody>
+      <!-- </div> -->
+    </table>
+
+
+    <div *ngIf='cancelMessage'>
+      <h1>{{cancelMessage}}</h1>
+    </div>
+
+  </div>
+
+</div>

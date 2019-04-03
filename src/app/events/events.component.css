@@ -1,0 +1,81 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
+  .events {
+    
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  .events li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .events li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+  .events li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  .events .text {
+    position: relative;
+    top: -3px;
+  }
+  .events .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  h3{
+    color: rgb(255, 255, 255);
+    background: rgba(49, 49, 49, 0.856);
+    font: italic bold 50px/70px Georgia, serif;
+    border-radius: 1.5in;
+
+    
+  }
+
+  p {
+    color: rgb(255, 255, 255);
+    font: italic bold 30px/70px serif; 
+    background: rgba(49, 49, 49, 0.856);
+    border-radius: 1.5in;
+  }
+
+  img{
+    max-height: 600px;
+  }
+
+  img:hover{
+    cursor: pointer;
+  }
+
+  #scorpionsAreInTown{
+    color: rgb(255, 255, 255);
+    font: italic bold 50px/70px serif; 
+    background: rgba(138, 119, 119, 0.856);
+    border-radius: 1.5in;
+
+  }
+
+

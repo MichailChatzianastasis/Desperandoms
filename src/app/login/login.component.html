@@ -1,0 +1,106 @@
+<!-- <div *ngFor="user"> -->
+
+<!-- <div *ngIf="email">
+                <h5>You are already signed in</h5>
+        </div> -->
+
+
+
+
+<!-- </div> -->
+
+<div class="container">
+        <img src="../../assets/welcome_logo.png" style="float: right; margin-top: 12%" alt="ticket monster">
+    <h1 style="margin-top: 5%">Already a User: </h1>
+
+
+    <div *ngIf="user" class="form-horizontal">
+        <table>
+            <tr style="font-size: 25px;color: black;">
+                <td>Email:</td>
+                <td>
+                    <input [(ngModel)]="loggingInUser.email" name="email" type="email" placeholder="example@timon.com"> </td>
+            </tr>
+
+            <tr style="font-size: 25px;color: black;">
+                <td>Password:</td>
+                <td>
+                    <input [(ngModel)]="loggingInUser.password" type="password"> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+
+                    <input type="button" class="formButton" (click)="login()" value="Log In">
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <!-- [{"firstName":"Sokratis","lastName":"Mourselas",
+"phoneNumber":"6985747000","userName":"socmour","password":"root","email":"socmour@hotmail.com","accessLevel":0}] -->
+
+
+
+    <h1 id="newUser">Here you can create a new User: </h1>
+
+    <div *ngIf="user"  class="form-horizontal">
+        <table>
+
+            <!-- <tr>
+                <td>User Id:</td>
+                <td>
+                    <input [(ngModel)]="user.userId" id="id" type="number" required> </td>
+                
+            </tr> -->
+            <tr>
+                <td style="font-size: 25px;color: black;">First Name:</td>
+                <td style="font-size: 25px;color: black;">
+                    <input [(ngModel)]="user.firstName" id="firstName" type="text" placeholder="e.g. Johny" required> </td>
+            </tr>
+
+            <tr style="font-size: 25px;color: black;">
+                <td>Last Name:</td>
+                <td>
+                    <input [(ngModel)]="user.lastName" id="lastName" type="text" placeholder="e.g. Roggers" required> </td>
+            </tr>
+            <tr style="font-size: 25px;color: black;">
+                <td>Phone Number:</td>
+                <td>
+                    <input [(ngModel)]="user.phoneNumber" id="phoneNumber" type="number" placeholder="e.g. 6912345678" required> </td>
+            </tr>
+            <tr style="font-size: 25px;color: black;">
+                <td>Username:</td>
+                <td>
+                    <input [(ngModel)]="user.userName" id="userName" type="text" required>
+                </td>
+            </tr>
+            <tr style="font-size: 25px;color: black;">
+                <td>Password:</td>
+                <td>
+                    <input [(ngModel)]="user.password" id="password" type="password" required> </td>
+            </tr>
+            <tr style="font-size: 25px;color: black;">
+                <td>Email:</td>
+                <td>
+                    <input [(ngModel)]="user.email" id="email" type="email" required> </td>
+            </tr>
+            <!-- <tr> -->
+                <!-- <td>Gender:</td>
+        <td>
+            <input name="gender" type="radio" value="male" checked>Male
+            <input name="gender" type="radio" value="female">Female
+            <input name="gender" type="radio" value="other">Other
+        </td> -->
+            <!-- </tr> -->
+            <tr style="font-size: 25px">
+                <td colspan="2">
+                    <input type="button" class="formButton2" (click)='createUser()' value="Add">
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+</div>

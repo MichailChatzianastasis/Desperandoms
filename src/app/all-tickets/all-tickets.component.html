@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+    <!-- class="navbar navbar-inverse navbar-fixed-top affix" -->
+
+    <div class="container-fluid navbar-sticky-top" data-spy="affix" data-offset-top="197">
+
+        <div *ngIf="message">
+            <p id="ticketMessage">{{message}}</p>
+        </div>
+
+    </div>
+
+
+    <div *ngIf="!email" class="container-fluid">
+
+        <div *ngIf="message">
+            <p id="ticketMessage">You must be logged in, in Order to show the list of available tickets
+                <br>
+                <a routerLink="/login"> Press here to Login</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div *ngIf="email">
+        <h2 style="margin-top: 5%">Here is a list of all the current available tickets:</h2>
+
+
+
+        <table class="table table-bordered" class="table table-hover">
+            <thead>
+                <tr style="font-size: 25px;color: black;">
+                    <th>ID</th>
+                    <th>Ticket Name</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Reserve</th>
+                </tr>
+            </thead>
+            <!-- <div *ngFor="let tickets of ticket" class="list-group"> -->
+            <tbody *ngFor="let tickets of ticket">
+                <tr *ngIf="tickets.isReserved===0" style="font-size: 20px;color: rgb(17, 0, 90);">
+                    <td>{{tickets.ticketId}}</td>
+                    <td>{{tickets.eventName}}</td>
+                    <td>{{tickets.eventTime}}</td>
+                    <td>{{tickets.price}} &euro;</td>
+                    <td>
+                        <button (click)="reserve(tickets.ticketId)" title="Reserve this ticket">Reserve</button>
+                    </td>
+                </tr>
+
+            </tbody>
+            <!-- </div> -->
+        </table>
+    </div>
+</div>

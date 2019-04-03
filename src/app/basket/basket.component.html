@@ -1,0 +1,51 @@
+<div class="container">
+
+  <!-- class="navbar navbar-inverse navbar-fixed-top affix" -->
+
+
+
+
+  <h2 style="margin-top: 5%">Here is a list of all your reserved tickets:</h2>
+
+
+
+  <table class="table table-bordered" class="table table-hover">
+    <thead>
+      <tr   style="font-size: 25px;color: black;">
+        <th>ID</th>
+        <th>Ticket Name</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Cancel Ticket</th>
+      </tr>
+    </thead>
+    <!-- <div *ngFor="let tickets of ticket" class="list-group"> -->
+    <tbody *ngFor="let tickets of basketTickets">
+      <tr *ngIf="tickets.isReserved===1"  style="font-size: 20px;color: rgb(17, 0, 90);">
+        <td>{{tickets.ticketId}}</td>
+        <td>{{tickets.eventName}}</td>
+        <td>{{tickets.eventTime}}</td>
+        <td>{{tickets.price}} &euro;</td>
+        <td>
+          <button (click)="cancelTicket(tickets.ticketId)" title="Unreserve this ticket">Cancel</button>
+        </td>
+      </tr>
+
+    </tbody>
+    <!-- </div> -->
+  </table>
+
+
+  <div *ngIf='message'>
+    <h1>{{message}}</h1>
+  </div>
+
+  <button (click)="calculateCheckoutBill()">Refresh Total</button>
+  <div>
+    <h1>Your total price is: {{sum}} &euro;</h1>
+  </div>
+  
+  <button (click)="purchaseBasket()" routerLink="/checkout">Proceed to checkout</button>
+
+
+</div>
